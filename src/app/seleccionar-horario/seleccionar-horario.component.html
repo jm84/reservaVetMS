@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Seleccionar Horario</h2>
+  <div *ngFor="let horario of horarios" class="horario-button">
+    <button mat-raised-button color="accent" (click)="seleccionarHorario(horario.id)">
+      {{ horario.hora }}
+    </button>
+  </div>
+  <button mat-raised-button color="primary" [disabled]="!horarioSeleccionado" (click)="confirmarReserva()">Reservar</button>
+</div>

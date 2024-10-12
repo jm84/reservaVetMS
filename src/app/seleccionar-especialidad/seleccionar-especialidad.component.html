@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Seleccionar Especialidad</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Especialidad</mat-label>
+    <mat-select [(value)]="selectedEspecialidad" (selectionChange)="onEspecialidadChange($event)">
+      <mat-option *ngFor="let especialidad of especialidades" [value]="especialidad.id">
+        {{ especialidad.nombre }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

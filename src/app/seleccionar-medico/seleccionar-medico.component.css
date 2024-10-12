@@ -1,0 +1,19 @@
+.container {
+  margin: 20px;
+}
+
+.medico-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.medico-foto {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.medico-info {
+  flex: 1;
+}
