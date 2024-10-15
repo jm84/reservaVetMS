@@ -14,10 +14,13 @@ export class EspecialidadesService {
     return this.http.get(`${this.apiUrl}/especialidades`);
   }
 
-  getMedicos(especialidadId: number): Observable<any> {
-    return this.http.get(
-      `${this.apiUrl}/medicos?especialidadId=${especialidadId}`
-    );
+  // getMedicos(especialidadId: number): Observable<any> {
+  //   return this.http.get(
+  //     `${this.apiUrl}/medicos?especialidadId=${especialidadId}`
+  //   );
+  // }
+  getMedicosByEspecialidad(especialidadId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/especialidad/${especialidadId}`);
   }
 
   getHorarios(medicoId: number): Observable<any> {

@@ -1,11 +1,17 @@
 <div class="container">
   <h2>Seleccionar Médico</h2>
-  <div *ngFor="let medico of medicos" class="medico-card">
-    <img [src]="medico.foto" alt="{{ medico.nombre }}" class="medico-foto">
+  <div *ngFor="let medico of filteredMedicos" class="medico-card">
+    <img [src]="medico.foto" alt="{{ medico.nombre }}" class="medico-foto" />
     <div class="medico-info">
       <h3>{{ medico.nombre }}</h3>
       <p>{{ medico.especialidad }}</p>
-      <button mat-raised-button color="primary" (click)="verDisponibilidad(medico.id)">Ver Disponibilidad</button>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="verDisponibilidad(medico.id)"
+      >
+        Ver Disponibilidad
+      </button>
     </div>
   </div>
 </div>
