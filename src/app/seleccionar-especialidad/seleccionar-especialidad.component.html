@@ -1,11 +1,21 @@
-<div class="container">
-  <h2>Seleccionar Especialidad</h2>
-  <mat-form-field appearance="fill">
-    <mat-label>Especialidad</mat-label>
-    <mat-select [(value)]="selectedEspecialidad" (selectionChange)="onEspecialidadChange($event)">
-      <mat-option *ngFor="let especialidad of especialidades" [value]="especialidad.id">
-        {{ especialidad.nombre }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-</div>
+<mat-tab-group class="custom-tab-group">
+  <mat-tab label="Buscar especialidad">
+    <div style="text-align: center; margin-top: 20px">
+      <mat-form-field class="especialidades-container">
+        <mat-select
+          class="especialidades-combobox"
+          placeholder="Seleccione especialidad"
+          [(value)]="selectedEspecialidad"
+          (selectionChange)="onEspecialidadChange($event)"
+        >
+          <mat-option
+            *ngFor="let especialidad of especialidades"
+            [value]="especialidad.id"
+          >
+            {{ especialidad.nombre }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </mat-tab>
+</mat-tab-group>

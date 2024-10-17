@@ -1,3 +1,32 @@
-.container {
-  margin: 20px;
+.custom-tab-group {
+  width: 50%; /* Ajusta el ancho según sea necesario */
+  margin: 0 auto; /* Centra el tab group horizontalmente */
+  border: 2px solid #ccc; /* Agrega un borde */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+.especialidades-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.especialidades-form-field {
+  width: 100%;
+}
+
+.especialidades-combobox {
+  width: 50%; /* Ajusta el ancho del combobox */
+  height: 50px; /* Ajusta la altura según sea necesario */
+  background-color: rgb(30, 255, 0);
+  color: rgb(88, 68, 68);
+  border-radius: 8px;
+  text-align: center; /* Centra el texto del placeholder */
+
+}
+
+.mat-select-placeholder {
+  text-align: center; /* Centra el texto del placeholder */
 }
